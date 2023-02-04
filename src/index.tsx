@@ -1,18 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
-function List() {
-    return (
-        <>
-            <h1>List</h1>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
-        </>
-    )
-}
+import { List } from './List'
 
 type TitleProps = {
     name: string
@@ -40,6 +28,7 @@ const App = () => {
             />
             <Title name="React" text="Lorem ipsum dolor sit, amet" age={22} />
             <Title name="TS" text="Lorem ipsum dolor" age={20} />
+            <List />
         </div>
     )
 }
