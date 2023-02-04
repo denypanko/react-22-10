@@ -3,21 +3,43 @@ import ReactDOM from 'react-dom/client'
 
 function List() {
     return (
-        <React.Fragment>
+        <>
             <h1>List</h1>
             <ul>
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>
             </ul>
-        </React.Fragment>
+        </>
+    )
+}
+
+type TitleProps = {
+    name: string
+    text: string
+    age: number
+}
+
+const Title = ({ name, text, age }: TitleProps) => {
+    return (
+        <>
+            <h1>Hello {name}</h1>
+            <p>Hi {text}</p>
+            <div>Age {age}</div>
+        </>
     )
 }
 
 const App = () => {
     return (
-        <div>
-            <List />
+        <div className="app">
+            <Title
+                name="App"
+                text="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+                age={25}
+            />
+            <Title name="React" text="Lorem ipsum dolor sit, amet" age={22} />
+            <Title name="TS" text="Lorem ipsum dolor" age={20} />
         </div>
     )
 }
