@@ -2,6 +2,7 @@ import './List.css'
 
 type Props = {}
 export const List = (props: Props) => {
+    let data = false
     return (
         <>
             <h1>List</h1>
@@ -10,7 +11,7 @@ export const List = (props: Props) => {
                 <li>2</li>
                 <li>3</li>
             </ul>
-            <p className="content">
+            <p className={`${data ? 'content' : 'test'}`}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
                 tenetur vel facilis ratione quisquam. Eos recusandae natus culpa
                 dolorum nostrum quasi quidem harum blanditiis eveniet sint in
