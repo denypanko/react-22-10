@@ -1,4 +1,5 @@
 type Product = {
+    id: number
     title: string
     description: string
     type: string
@@ -8,6 +9,7 @@ type Product = {
 
 const productsArray:Product[] = [
     {
+    id: 1,
     title: "iPhone 14 Pro",
     description: "This Iphone 14 Pro",
     type: "phone",
@@ -15,6 +17,7 @@ const productsArray:Product[] = [
     price: 999,
 },
     {
+        id: 1,
     title: "iPhone 13 Pro",
     description: "This Iphone 13 Pro",
     type: "phone",
@@ -22,6 +25,7 @@ const productsArray:Product[] = [
     price: 899,
 },
     {
+        id: 1,
     title: "iPhone 12 Pro",
     description: "This Iphone 12 Pro",
     type: "phone",
@@ -29,6 +33,7 @@ const productsArray:Product[] = [
     price: 799,
 },
     {
+        id: 1,
     title: "iPhone 11 Pro",
     description: "This Iphone 11 Pro",
     type: "phone",
@@ -36,6 +41,7 @@ const productsArray:Product[] = [
     price: 699,
 },
     {
+        id: 1,
     title: "iPhone XR",
     description: "This Iphone XR",
     type: "phone",
@@ -43,6 +49,7 @@ const productsArray:Product[] = [
     price: 599,
 },
     {
+        id: 1,
     title: "iPhone X",
     description: "This Iphone X",
     type: "phone",
