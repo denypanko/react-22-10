@@ -55,7 +55,7 @@ const ProductsListItem = ({
                     <TextField size="small" value={count}></TextField>
                     <Button
                         variant="outlined"
-                        onClick={() => onIncrement(3)}
+                        onClick={() => onIncrement(1)}
                         disabled={count >= 10}
                     >
                         +
