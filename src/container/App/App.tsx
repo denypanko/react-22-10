@@ -12,20 +12,22 @@ export type ProductsInCartType = {
 }
 
 const App = (props: Props) => {
-    const [productsInCart, setProductsInCart] = useState<ProductsInCartType>({
-        1: 5,
-        2: 5,
-    })
+    const [productsInCart, setProductsInCart] = useState<ProductsInCartType>({})
 
-    const addProductToCart = (product: number, count: number) => {}
+    const addProductToCart = (id: number, count: number) => {
+        setProductsInCart((prevState) => ({
+            ...prevState,
+            [id]: (prevState[id] || 0) + count,
+        }))
+    }
 
     return (
         <StyledEngineProvider injectFirst>
             <CssBaseline />
             <Header productsInCart={productsInCart} />
-            {/* <button onClick={() => addProductToCart(5, 500)}>
-                Add to cart (count:5, price: 500$)
-            </button> */}
+            <button onClick={() => addProductToCart(2, 5)}>
+                Add to cart (id:2, count: 5)
+            </button>
             <Main addProductToCart={addProductToCart} />
             <Footer />
         </StyledEngineProvider>
