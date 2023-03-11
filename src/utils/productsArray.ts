@@ -19,7 +19,7 @@ const productsArray:Product[] = [
     image: '/images/1.jpg'
 },
     {
-        id: 1,
+        id: 2,
     title: "iPhone 13 Pro",
     description: "This Iphone 13 Pro",
     type: "phone",
@@ -28,7 +28,7 @@ const productsArray:Product[] = [
     image: '/images/2.jpg'
 },
     {
-        id: 1,
+        id: 3,
     title: "iPhone 12 Pro",
     description: "This Iphone 12 Pro",
     type: "phone",
@@ -37,7 +37,7 @@ const productsArray:Product[] = [
     image: '/images/3.jpg'
 },
     {
-        id: 1,
+        id: 4,
     title: "iPhone 11 Pro",
     description: "This Iphone 11 Pro",
     type: "phone",
@@ -46,7 +46,7 @@ const productsArray:Product[] = [
     image: '/images/4.jpg'
 },
     {
-        id: 1,
+        id: 5,
     title: "iPhone XR",
     description: "This Iphone XR",
     type: "phone",
@@ -55,7 +55,7 @@ const productsArray:Product[] = [
     image: '/images/5.jpg'
 },
     {
-        id: 1,
+        id: 6,
     title: "iPhone X",
     description: "This Iphone X",
     type: "phone",
