@@ -11,7 +11,11 @@ import About from 'pages/About/AboutPage'
 import Shipping from 'pages/Shipping/ShippingPage'
 import Payment from 'pages/Payment/PaymentPage'
 
-type Props = {}
+type Props = {
+    productsInCart: {
+        [id: number]: number
+    }
+}
 
 export type ProductsInCartType = {
     [id: number]: number
@@ -44,7 +48,10 @@ const App = (props: Props) => {
                         path="/"
                         element={<Home addProductToCart={addProductToCart} />}
                     />
-                    <Route path="/cart" element={<CartPage />} />
+                    <Route
+                        path="/cart"
+                        element={<CartPage productsInCart={productsInCart} />}
+                    />
                     <Route path="/about" element={<About />} />
                     <Route path="/shipping" element={<Shipping />} />
                     <Route path="/payment" element={<Payment />} />
