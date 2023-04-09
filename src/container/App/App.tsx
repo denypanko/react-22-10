@@ -1,9 +1,12 @@
 import Footer from 'container/Footer/Footer'
 import Header from 'container/Header/Header'
-import Main from 'container/Main/Main'
 import CssBaseline from '@mui/material/CssBaseline'
 import { StyledEngineProvider } from '@mui/material/styles'
 import { useState } from 'react'
+import { Container } from '@mui/material'
+import Home from 'pages/Home/Home'
+import { Routes, Route } from 'react-router-dom'
+import CartPage from 'pages/CartPage/CartPage'
 
 type Props = {}
 
@@ -28,7 +31,19 @@ const App = (props: Props) => {
             <button onClick={() => addProductToCart(2, 5)}>
                 Add to cart (id:2, count: 5)
             </button>
-            <Main addProductToCart={addProductToCart} />
+            <Container
+                sx={{
+                    padding: '60px 0',
+                }}
+            >
+                <Routes>
+                    <Route
+                        path="/"
+                        element={<Home addProductToCart={addProductToCart} />}
+                    />
+                    <Route path="/cart" element={<CartPage />} />
+                </Routes>
+            </Container>
             <Footer />
         </StyledEngineProvider>
     )
