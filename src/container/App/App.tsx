@@ -57,7 +57,12 @@ const App = (props: Props) => {
                     />
                     <Route
                         path="/cart"
-                        element={<CartPage productsInCart={productsInCart} />}
+                        element={
+                            <CartPage
+                                productsInCart={productsInCart}
+                                removeProductFromCart={removeProductFromCart}
+                            />
+                        }
                     />
                     <Route path="/about" element={<About />} />
                     <Route path="/shipping" element={<Shipping />} />
